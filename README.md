@@ -12,5 +12,5 @@ Build a restaurant homepage by dynamically rendering all elements. We are going 
 - [x] npm install lodash
 - [x] setup folder structure
 - [x] add .gitignore
-- [ ] add webpack.config.js
+- [x] add webpack.config.js
 - [ ] setup HTML skeleton
