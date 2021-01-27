@@ -13,7 +13,7 @@ const createContent = () => {
       event.target.id == 'Home' &&
       container.childNodes[0].textContent !== 'SashaSushi'
     ) {
-      container.removeChild(container.firstChild);
+      container.innerHTML = '';
       createHome(container);
       container.id = 'home';
     }
@@ -21,7 +21,7 @@ const createContent = () => {
       event.target.id == 'Menu' &&
       container.childNodes[0].textContent !== 'SashaMenu'
     ) {
-      container.removeChild(container.firstChild);
+      container.innerHTML = '';
       createMenu(container);
       container.id = 'menu';
     }
@@ -29,7 +29,7 @@ const createContent = () => {
       event.target.id == 'Contact' &&
       container.childNodes[0].textContent !== 'SashaContact'
     ) {
-      container.removeChild(container.firstChild);
+      container.innerHTML = '';
       createContact(container);
       container.id = 'contact';
     }
