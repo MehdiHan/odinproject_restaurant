@@ -26,7 +26,62 @@ eval("/* module decorator */ module = __webpack_require__.nmd(module);\nvar __WE
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\r\nconst content = document.getElementById('content');\r\nfunction component() {\r\n  const element = document.createElement('div');\r\n\r\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'Webpack'], ' ');\r\n\r\n  return element;\r\n}\r\n\r\ndocument.body.appendChild(component());\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/navbar */ \"./src/modules/navbar.js\");\n/* harmony import */ var _modules_content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/content */ \"./src/modules/content.js\");\n\r\n\r\n\r\n\r\n(0,_modules_navbar__WEBPACK_IMPORTED_MODULE_1__.createNavbar)();\r\n(0,_modules_content__WEBPACK_IMPORTED_MODULE_2__.createContent)();\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/content.js":
+/*!********************************!*\
+  !*** ./src/modules/content.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContent\": () => /* binding */ createContent\n/* harmony export */ });\n/* harmony import */ var _modules_tabs_contact__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules_tabs/contact */ \"./src/modules/modules_tabs/contact.js\");\n/* harmony import */ var _modules_tabs_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules_tabs/home */ \"./src/modules/modules_tabs/home.js\");\n/* harmony import */ var _modules_tabs_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules_tabs/menu */ \"./src/modules/modules_tabs/menu.js\");\n\r\n\r\n\r\n\r\nconst createContent = () => {\r\n  const content = document.getElementById('content');\r\n  const navbar = document.getElementById('navbar');\r\n  const container = document.createElement('main');\r\n  (0,_modules_tabs_home__WEBPACK_IMPORTED_MODULE_1__.createHome)(container);\r\n  container.id = 'home';\r\n  navbar.addEventListener('click', (event) => {\r\n    if (\r\n      event.target.id == 'Home' &&\r\n      container.childNodes[0].textContent !== 'SashaSushi'\r\n    ) {\r\n      container.removeChild(container.firstChild);\r\n      (0,_modules_tabs_home__WEBPACK_IMPORTED_MODULE_1__.createHome)(container);\r\n      container.id = 'home';\r\n    }\r\n    if (\r\n      event.target.id == 'Menu' &&\r\n      container.childNodes[0].textContent !== 'SashaMenu'\r\n    ) {\r\n      container.removeChild(container.firstChild);\r\n      (0,_modules_tabs_menu__WEBPACK_IMPORTED_MODULE_2__.createMenu)(container);\r\n      container.id = 'menu';\r\n    }\r\n    if (\r\n      event.target.id == 'Contact' &&\r\n      container.childNodes[0].textContent !== 'SashaContact'\r\n    ) {\r\n      container.removeChild(container.firstChild);\r\n      (0,_modules_tabs_contact__WEBPACK_IMPORTED_MODULE_0__.createContact)(container);\r\n      container.id = 'contact';\r\n    }\r\n  });\r\n  content.appendChild(container);\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/modules/content.js?");
+
+/***/ }),
+
+/***/ "./src/modules/modules_tabs/contact.js":
+/*!*********************************************!*\
+  !*** ./src/modules/modules_tabs/contact.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createContact\": () => /* binding */ createContact\n/* harmony export */ });\nconst createContact = (element) => {\r\n  const headline = document.createElement('h1');\r\n  headline.innerHTML = 'SashaContact';\r\n  element.appendChild(headline);\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/modules/modules_tabs/contact.js?");
+
+/***/ }),
+
+/***/ "./src/modules/modules_tabs/home.js":
+/*!******************************************!*\
+  !*** ./src/modules/modules_tabs/home.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHome\": () => /* binding */ createHome\n/* harmony export */ });\nconst createHome = (element) => {\r\n  const headline = document.createElement('h1');\r\n  headline.innerHTML = 'SashaSushi';\r\n\r\n  element.appendChild(headline);\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/modules/modules_tabs/home.js?");
+
+/***/ }),
+
+/***/ "./src/modules/modules_tabs/menu.js":
+/*!******************************************!*\
+  !*** ./src/modules/modules_tabs/menu.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createMenu\": () => /* binding */ createMenu\n/* harmony export */ });\nconst createMenu = (element) => {\r\n  const headline = document.createElement('h1');\r\n  headline.innerHTML = 'SashaMenu';\r\n\r\n  element.appendChild(headline);\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/modules/modules_tabs/menu.js?");
+
+/***/ }),
+
+/***/ "./src/modules/navbar.js":
+/*!*******************************!*\
+  !*** ./src/modules/navbar.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createNavbar\": () => /* binding */ createNavbar\n/* harmony export */ });\nconst createNavbar = () => {\r\n  const content = document.getElementById('content');\r\n  const nav = document.createElement('nav');\r\n  const links = ['Home', 'Menu', 'Contact'];\r\n  links.forEach((link) => {\r\n    const navLink = document.createElement('a');\r\n    navLink.href = `#${link}`;\r\n    navLink.innerHTML = link;\r\n    navLink.id = link;\r\n    nav.appendChild(navLink);\r\n  });\r\n\r\n  nav.id = 'navbar';\r\n  content.appendChild(nav);\r\n};\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant_page/./src/modules/navbar.js?");
 
 /***/ })
 
