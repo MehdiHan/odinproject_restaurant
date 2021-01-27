@@ -1,15 +1,3 @@
-const createMenu = (element) => {
-  const headline = document.createElement('h1');
-  const sliderContainer = document.createElement('div');
-  headline.innerHTML = 'SashaMenu';
-  sliderContainer.classList.add('slider__container');
-  createSlider(sliderElements, sliderContainer);
-  element.appendChild(headline);
-  element.appendChild(sliderContainer);
-};
-
-export { createMenu };
-
 const sliderElements = [
   {
     title: "Sasha's Burger",
@@ -27,11 +15,10 @@ const sliderElements = [
     url: '../../src/assets/img/slider_image_california.jpg',
   },
 ];
-
 /**
  *
  * @param {array} elements array of objects
- * @param {HTMLElement} container HTMLelement
+ * @param {HTMLElement} container HTMLElement to append each elements.
  */
 const createSlider = (elements, container) => {
   elements.forEach((element) => {
@@ -53,3 +40,15 @@ const createSlider = (elements, container) => {
     container.appendChild(elementsContainer);
   });
 };
+
+const createMenu = (element) => {
+  const headline = document.createElement('h1');
+  const sliderContainer = document.createElement('div');
+  headline.innerHTML = 'SashaMenu';
+  sliderContainer.classList.add('slider__container');
+  createSlider(sliderElements, sliderContainer);
+  element.appendChild(headline);
+  element.appendChild(sliderContainer);
+};
+
+export { createMenu };
