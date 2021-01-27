@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#navbar {
+  position: fixed;
+  top: 3.5rem;
+  right: 6.25rem;
+}
+
+#navbar a:nth-child(-n + 2) {
+  margin-right: 10px;
+}
+#home {
+  background: transparent url(/dist/css/images/background_image_large.jpg)
+    center center no-repeat;
+}
+
+#menu,
+#contact {
+  background: radial-gradient(50% 50% at 50% 50%, #080e1a 0%, #04070d 100%);
+}
+
+main {
+  height: 100vh;
+}
