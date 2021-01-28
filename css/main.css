@@ -17,17 +17,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
 }
-
 body {
   position: relative;
   color: #ffffff;
   font-family: contentText;
 }
-
 img {
   display: block;
   max-width: 100%;
@@ -47,33 +44,34 @@ h1 {
   top: 3.5rem;
   right: 6.25rem;
 }
-
-#navbar a:nth-child(-n + 2) {
-  margin-right: 10px;
+#navbar a {
+  transition: border-bottom 600ms linear;
 }
-
+#navbar a:hover {
+  border-bottom: 1px solid #fdad4b;
+  transition: border-bottom 600ms linear;
+}
+#navbar a:nth-child(-n + 2) {
+  margin-right: 80px;
+}
 #home {
   background: transparent url(/dist/css/images/background_image_large.jpg)
     center center no-repeat;
 }
-
 #menu,
 #contact {
   background: radial-gradient(50% 50% at 50% 50%, #080e1a 0%, #04070d 100%);
 }
-
 #home h1 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 #menu h1,
 #contact h1 {
   padding: 142px 0 48px 0;
 }
-
 #contact h1 {
   position: absolute;
   left: 50%;
@@ -83,14 +81,12 @@ h1 {
 main {
   min-height: 100vh;
 }
-
 .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .form__container {
   min-width: 630px;
   height: 820px;
@@ -120,6 +116,13 @@ main {
   display: flex;
   justify-content: space-around;
 }
+.form__container div p:first-child {
+  padding-bottom: 24px;
+}
+.fa-map-marker-alt,
+.fa-phone-alt {
+  margin-right: 24px;
+}
 .slider__container {
   display: flex;
   justify-content: center;
@@ -133,7 +136,6 @@ main {
 .elements__wrapper:nth-child(2) {
   z-index: 999;
 }
-
 .elements__wrapper:first-child {
   left: 15%;
   opacity: 0.5;
@@ -146,7 +148,6 @@ main {
 .elements__wrapper:last-child .elements__header {
   opacity: 0;
 }
-
 .elements__header {
   font-size: 40px;
   font-family: contentTextBold;
@@ -156,13 +157,11 @@ main {
   top: 40px;
   left: -120px;
 }
-
 .elements__header p {
   font-size: 16px;
   font-family: contentText;
   text-align: right;
 }
-
 .container {
   display: flex;
   flex-direction: row;
@@ -170,7 +169,6 @@ main {
   align-items: center;
   max-width: 1250px;
 }
-
 .display__none {
   display: none;
 }
