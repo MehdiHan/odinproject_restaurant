@@ -2,17 +2,17 @@ const sliderElements = [
   {
     title: "Sasha's Burger",
     description: 'Delicious burger with tuna and nori',
-    url: '../../src/assets/img/slider_image_burger.jpg',
+    url: '../../dist/assets/img/slider_image_burger.jpg',
   },
   {
     title: "Sasha's Combo",
     description: 'Combination of chef’s selection',
-    url: '../../src/assets/img/slider_image_combo.jpg',
+    url: '../../dist/assets/img/slider_image_combo.jpg',
   },
   {
     title: "Sasha's Burger",
     description: 'Pretty California Rolls Royce',
-    url: '../../src/assets/img/slider_image_california.jpg',
+    url: '../../dist/assets/img/slider_image_california.jpg',
   },
 ];
 /**
