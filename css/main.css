@@ -23,6 +23,7 @@ html {
 }
 
 body {
+  position: relative;
   color: #ffffff;
   font-family: contentText;
 }
@@ -72,10 +73,53 @@ h1 {
 #contact h1 {
   padding: 142px 0 48px 0;
 }
+
+#contact h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
 main {
   min-height: 100vh;
 }
 
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__container {
+  min-width: 630px;
+  height: 820px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form__container h2 {
+  position: relative;
+  font-size: 48px;
+  font-family: contentTextBold;
+  text-transform: uppercase;
+}
+.form__container h2::before {
+  content: url(/dist/css/images/shapes.png);
+  position: absolute;
+  right: -110px;
+  z-index: -1;
+}
+.form__container h2,
+.form__container div {
+  padding-bottom: 80px;
+}
+.form__container nav {
+  min-width: 340px;
+  display: flex;
+  justify-content: space-around;
+}
 .slider__container {
   display: flex;
   justify-content: center;
@@ -125,4 +169,8 @@ main {
   justify-content: center;
   align-items: center;
   max-width: 1250px;
+}
+
+.display__none {
+  display: none;
 }
