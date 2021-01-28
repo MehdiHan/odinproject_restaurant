@@ -1,14 +1,14 @@
 @font-face {
   font-family: contentTitle;
-  src: url('assets/fonts/Againts.ttf') format('truetype');
+  src: url('/assets/fonts/Againts.ttf') format('truetype');
 }
 @font-face {
   font-family: contentText;
-  src: url('assets/fonts/Monda-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/Monda-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: contentTextBold;
-  src: url('assets/fonts/Monda-Bold.woff2') format('woff2');
+  src: url('/assets/fonts/Monda-Bold.woff2') format('woff2');
 }
 *,
 *::before,
@@ -55,8 +55,8 @@ h1 {
   margin-right: 80px;
 }
 #home {
-  background: transparent url(css/images/background_image_large.jpg) center
-    center no-repeat;
+  background: transparent url(images/background_image_large.jpg) center center
+    no-repeat;
 }
 #menu,
 #contact {
@@ -102,7 +102,7 @@ main {
   text-transform: uppercase;
 }
 .form__container h2::before {
-  content: url(css/images/shapes.png);
+  content: url(images/shapes.png);
   position: absolute;
   right: -110px;
   z-index: -1;
