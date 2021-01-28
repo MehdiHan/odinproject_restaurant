@@ -1,11 +1,15 @@
 const createSocialNav = (element) => {
   const socialNav = document.createElement('nav');
-  const socialLinks = ['facebook', 'instagram', 'twitter'];
+  const socialLinks = [
+    { name: 'facebook', fontAwesome: '<i class="fab fa-facebook-f"></i>' },
+    { name: 'instagram', fontAwesome: '<i class="fab fa-instagram"></i>' },
+    { name: 'twitter', fontAwesome: '<i class="fab fa-twitter"></i>' },
+  ];
 
   socialLinks.forEach((socialLink) => {
     const link = document.createElement('a');
-    link.href = `http://www.${socialLink}.com`;
-    link.innerHTML = socialLink;
+    link.href = `http://www.${socialLink.name}.com`;
+    link.innerHTML = `${socialLink.fontAwesome}<span class="display__none">${socialLink.name}</span>`;
     socialNav.appendChild(link);
   });
 
@@ -24,8 +28,10 @@ const createContact = (element) => {
 
   headline.innerHTML = 'SashaContact';
   formTitle.innerHTML = 'SashaSushi';
-  formContactAdress.innerHTML = '1636 South St - Philadelphia, PA';
-  formContactPhone.innerHTML = '(215) 735-6668';
+  formContactAdress.innerHTML =
+    '<i class="fas fa-map-marker-alt"></i> 1636 South St - Philadelphia, PA';
+  formContactPhone.innerHTML =
+    '<i class="fas fa-phone-alt"></i> (215) 735-6668';
   picture.src = '../../src/assets/img/contact_image.jpg';
 
   formContainer.classList.add('form__container');
