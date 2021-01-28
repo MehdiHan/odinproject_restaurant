@@ -32,7 +32,7 @@ const createContact = (element) => {
     '<i class="fas fa-map-marker-alt"></i> 1636 South St - Philadelphia, PA';
   formContactPhone.innerHTML =
     '<i class="fas fa-phone-alt"></i> (215) 735-6668';
-  picture.src = '../../dist/assets/img/contact_image.jpg';
+  picture.src = 'assets/img/contact_image.jpg';
 
   formContainer.classList.add('form__container');
   container.classList.add('container');
