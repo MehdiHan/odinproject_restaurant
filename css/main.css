@@ -1,14 +1,14 @@
 @font-face {
   font-family: contentTitle;
-  src: url('../assets/fonts/Againts.ttf') format('truetype');
+  src: url('fonts/Againts.ttf') format('truetype');
 }
 @font-face {
   font-family: contentText;
-  src: url('../assets/fonts/Monda-Regular.woff2') format('woff2');
+  src: url('fonts/Monda-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: contentTextBold;
-  src: url('../assets/fonts/Monda-Bold.woff2') format('woff2');
+  src: url('fonts/Monda-Bold.woff2') format('woff2');
 }
 *,
 *::before,
