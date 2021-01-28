@@ -13,4 +13,14 @@ Build a restaurant homepage by dynamically rendering all elements. We are going 
 - [x] setup folder structure
 - [x] add .gitignore
 - [x] add webpack.config.js
-- [ ] setup HTML skeleton
+- [x] setup HTML skeleton
+- [x] generate HTML via JS modules
+- [x] add CSS file
+
+## Features could be add
+
+- [ ] responsive design
+- [ ] slider on "menu" page
+- [ ] burger menu
+- [ ] interactions on navbar
+- [ ] more ideas ...
